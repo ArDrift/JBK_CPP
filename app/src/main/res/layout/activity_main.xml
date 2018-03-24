@@ -14,6 +14,7 @@
         android:layout_marginEnd="8dp"
         android:layout_marginStart="8dp"
         android:layout_marginTop="8dp"
+        android:onClick="changeText"
         android:text="Calc"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
@@ -54,7 +55,7 @@
         app:layout_constraintTop_toTopOf="parent" />
 
     <TextView
-        android:id="@+id/textView"
+        android:id="@+id/mainTextTitle"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="Válassz tevékenységet"
@@ -80,11 +81,32 @@
         android:id="@+id/seekBar"
         android:layout_width="292dp"
         android:layout_height="16dp"
-        android:progress="@integer/mainTimePerc"
+        android:progress="@integer/mainTimeMin"
         app:layout_constraintBottom_toTopOf="@+id/mainTextTime"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/mainTextActivity"
         app:layout_constraintVertical_bias="0.708" />
+
+    <TextView
+        android:id="@+id/mainMinCount"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintBottom_toTopOf="@+id/seekBar"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/mainTextActivity" />
+
+    <Button
+        android:id="@+id/button"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Add"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/mainButtonID" />
 
 </android.support.constraint.ConstraintLayout>

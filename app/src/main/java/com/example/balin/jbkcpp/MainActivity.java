@@ -2,6 +2,7 @@ package com.example.balin.jbkcpp;
 
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.view.View;
 import android.widget.TextView;
 
 public class MainActivity extends AppCompatActivity {
@@ -27,4 +28,21 @@ public class MainActivity extends AppCompatActivity {
      */
     public native String stringFromJNI();
 
+
+    public void changeText(View v) {
+        TextView tv = (TextView) findViewById(R.id.sample_text);
+        tv.setText(changeText());
+
+    }
+
+    private native String changeText();
+
+/**
+    public void addValue(View v) {
+        TextView tv = (TextView) findViewById(R.id.mainMinCount);
+        tv.setText(addValue());
+    }
+
+    private native Integer addValue();
+ */
 }
